@@ -1,0 +1,122 @@
+extends ../layout/auth-layout
+block content
+
+  #page-wrapper
+    .container-fluid
+      .row.bg-title
+        .col-lg-3.col-md-4.col-sm-4.col-xs-12
+          h4.page-title Products
+        .row
+          .col-sm-12
+            .white-box
+              //- h3.box-title Basic Table
+              p.text-muted 
+                #add-popup.popup
+                  // Modal content
+                  .popup-content
+                    span.popupclose(onclick='closePopupAdd();') &times;
+                    h3 Add Product
+                    form(method='post' action='../product/store' enctype="multipart/form-data")
+                      .col-md-12
+                        label
+                          | Name 
+                          span.required *
+                        input(type='text' name='name' required)
+                      .col-md-6
+                        label
+                          | Category
+                          span.required *
+                        select.box(name="category")
+                          each category in categories
+                            option(value=`${category.name}`) #{category.name}
+                      .col-md-6
+                        label
+                          | Gender
+                          span.required *
+                        select.box(name='gender')
+                          option(value='Male') Male
+                          option(value='Female') Female
+                          option(value='All') All
+                      .listDetails
+                        .col-md-4
+                          label
+                            | Color
+                            span.required *
+                          input(type='text' name='color' required)
+                        .col-md-4
+                          label
+                            | Size
+                            span.required *
+                          input(type='text' name='size' required)
+                        .col-md-4
+                          label
+                            | Quantity
+                            span.required *
+                          input(type='number' name='quantity' min='0' required)
+                      .col-md-4
+                        input.btn.btn-danger.addDetails(style='margin-bottom:5px' type='button' value='Add Details' onclick='openPopupAdd();')
+                      .col-md-12
+                        label
+                          | Price
+                          span.required *
+                        input(type='number' name='price' min='0' required)
+                      .col-md-12
+                        label
+                          | Description 
+                          span.required *
+                        input(type='text' name='description' required)
+                      .col-md-12
+                        label
+                          | Image
+                          span.required *
+                        input(type="file" name="image" multiple required)
+                      .col-md-12
+                        input.btn.btn-success(type='submit' value='Submit')
+                    .clearfix
+                  .clearfix
+                input.btn.btn-danger(type='button' value='Add Product' onclick='openPopupAdd();')
+              .table-responsive
+                ul.nav.navbar-top-links
+                  li
+                    a.nav-toggler.open-close.waves-effect.waves-light.hidden-md.hidden-lg(href='javascript:void(0)')
+                      i.fa.fa-bars
+                  li
+                    form.app-search.hidden-sm.hidden-xs.m-r-10(role='search')
+                      input.form-control(type='text' placeholder='Search...')
+                      a(href='')
+                        i.fa.fa-search(style='color:#ffffff')
+                table.table
+                  thead
+                    tr
+                      th ID
+                      th Product Name
+                      th Category
+                      th Gender
+                      th Price
+                      th
+                      th
+                      th
+                  tbody
+                  each product in products
+                    tr
+                      td #{product._id}
+                      td #{product.name}
+                      td #{product.category}
+                      td #{product.gender}
+                      td #{product.price}
+                      td
+                        a.btn.btn-primary(href=`../product/edit/${product._id}`) Update
+                      td
+                        form(method='post',action=`../product/delete/${product._id}`)
+                          .col-md-12
+                            input.btn.btn-danger(type='submit' value='Delete' onclick='action();')
+                      td
+                        - var state = product.state
+                          if state === 'active'
+                            form(method='post' action=`../product/hidden/${product._id}`)
+                              .col-md-12
+                                input.btn.btn-danger(type='submit' value='Hidden' onclick='action();')
+                          else
+                            form(method='post' action=`../product/active/${product._id}`)
+                              .col-md-12
+                                input.btn.btn-success(type='submit' value='Active' onclick='action();')

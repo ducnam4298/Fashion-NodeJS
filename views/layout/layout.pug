@@ -1,0 +1,372 @@
+doctype html
+head
+  title= title
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // ===============================================================================================
+  link(rel='icon' type='image/png' href='../custom/images/icons/favicon.png')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/bootstrap/css/bootstrap.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/fonts/themify/themify-icons.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/fonts/elegant-font/html-css/style.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/animate/animate.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/css-hamburgers/hamburgers.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/animsition/css/animsition.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/select2/select2.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/daterangepicker/daterangepicker.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/slick/slick.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/lightbox2/css/lightbox.min.css')
+  link(rel='stylesheet' type='text/css' href='../custom/vendor/noui/nouislider.min.css')
+  // ===============================================================================================
+  link(rel='stylesheet' type='text/css' href='../custom/css/util.css')
+  link(rel='stylesheet' type='text/css' href='../custom/css/main.css')
+  // ===============================================================================================
+// Header
+header.header1
+  // Header desktop
+  .container-menu-header
+    .topbar
+      .topbar-social
+        a.topbar-social-item.fa.fa-facebook(href='../custom/#')
+        a.topbar-social-item.fa.fa-instagram(href='../custom/#')
+        a.topbar-social-item.fa.fa-pinterest-p(href='../custom/#')
+        a.topbar-social-item.fa.fa-snapchat-ghost(href='../custom/#')
+        a.topbar-social-item.fa.fa-youtube-play(href='../custom/#')
+      span.topbar-child1
+        | Free shipping for standard order over $100
+      .topbar-child2
+        span.topbar-email
+          | fashe@example.com
+        .topbar-language.rs1-select2
+          select.selection-1(name='time')
+            option USD
+            option EUR
+    .wrap_header
+      // Logo
+      a.logo(href='../custom/index.html')
+        img(src='../custom/images/icons/logo.png' alt='IMG-LOGO')
+      // Menu
+      .wrap_menu
+        nav.menu
+          ul.main_menu
+            li
+              a(href='../custom/index.html') Home
+              ul.sub_menu
+                li
+                  a(href='../custom/index.html') Homepage V1
+                li
+                  a(href='../custom/home-02.html') Homepage V2
+                li
+                  a(href='../custom/home-03.html') Homepage V3
+            li
+              a(href='../custom/product.html') Shop
+            li.sale-noti
+              a(href='../custom/product.html') Sale
+            li
+              a(href='../custom/cart.html') Features
+            li
+              a(href='../custom/blog.html') Blog
+            li
+              a(href='../custom/about.html') About
+            li
+              a(href='../custom/contact.html') Contact
+      // Header Icon
+      .header-icons
+        a.header-wrapicon1.dis-block(href='../custom/#')
+          img.header-icon1(src='../custom/images/icons/icon-header-01.png' alt='ICON')
+        span.linedivide1
+        .header-wrapicon2
+          img.header-icon1.js-show-header-dropdown(src='../custom/images/icons/icon-header-02.png' alt='ICON')
+          span.header-icons-noti 0
+          // Header cart noti
+          .header-cart.header-dropdown
+            ul.header-cart-wrapitem
+              li.header-cart-item
+                .header-cart-item-img
+                  img(src='../custom/images/item-cart-01.jpg' alt='IMG')
+                .header-cart-item-txt
+                  a.header-cart-item-name(href='../custom/#')
+                    | White Shirt With Pleat Detail Back
+                  span.header-cart-item-info
+                    | 1 x $19.00
+              li.header-cart-item
+                .header-cart-item-img
+                  img(src='../custom/images/item-cart-02.jpg' alt='IMG')
+                .header-cart-item-txt
+                  a.header-cart-item-name(href='../custom/#')
+                    | Converse All Star Hi Black Canvas
+                  span.header-cart-item-info
+                    | 1 x $39.00
+              li.header-cart-item
+                .header-cart-item-img
+                  img(src='../custom/images/item-cart-03.jpg' alt='IMG')
+                .header-cart-item-txt
+                  a.header-cart-item-name(href='../custom/#')
+                    | Nixon Porter Leather Watch In Tan
+                  span.header-cart-item-info
+                    | 1 x $17.00
+            .header-cart-total
+              | Total: $75.00
+            .header-cart-buttons
+              .header-cart-wrapbtn
+                // Button
+                a.flex-c-m.size1.bg1.bo-rad-20.hov1.s-text1.trans-0-4(href='../custom/cart.html')
+                  | View Cart
+              .header-cart-wrapbtn
+                // Button
+                a.flex-c-m.size1.bg1.bo-rad-20.hov1.s-text1.trans-0-4(href='../custom/#')
+                  | Check Out
+  // Header Mobile
+  .wrap_header_mobile
+    // Logo moblie
+    a.logo-mobile(href='../custom/index.html')
+      img(src='../custom/images/icons/logo.png' alt='IMG-LOGO')
+    // Button show menu
+    .btn-show-menu
+      // Header Icon mobile
+      .header-icons-mobile
+        a.header-wrapicon1.dis-block(href='../custom/#')
+          img.header-icon1(src='../custom/images/icons/icon-header-01.png' alt='ICON')
+        span.linedivide2
+        .header-wrapicon2
+          img.header-icon1.js-show-header-dropdown(src='../custom/images/icons/icon-header-02.png' alt='ICON')
+          span.header-icons-noti 0
+          // Header cart noti
+          .header-cart.header-dropdown
+            ul.header-cart-wrapitem
+              li.header-cart-item
+                .header-cart-item-img
+                  img(src='../custom/images/item-cart-01.jpg' alt='IMG')
+                .header-cart-item-txt
+                  a.header-cart-item-name(href='../custom/#')
+                    | White Shirt With Pleat Detail Back
+                  span.header-cart-item-info
+                    | 1 x $19.00
+              li.header-cart-item
+                .header-cart-item-img
+                  img(src='../custom/images/item-cart-02.jpg' alt='IMG')
+                .header-cart-item-txt
+                  a.header-cart-item-name(href='../custom/#')
+                    | Converse All Star Hi Black Canvas
+                  span.header-cart-item-info
+                    | 1 x $39.00
+              li.header-cart-item
+                .header-cart-item-img
+                  img(src='../custom/images/item-cart-03.jpg' alt='IMG')
+                .header-cart-item-txt
+                  a.header-cart-item-name(href='../custom/#')
+                    | Nixon Porter Leather Watch In Tan
+                  span.header-cart-item-info
+                    | 1 x $17.00
+            .header-cart-total
+              | Total: $75.00
+            .header-cart-buttons
+              .header-cart-wrapbtn
+                // Button
+                a.flex-c-m.size1.bg1.bo-rad-20.hov1.s-text1.trans-0-4(href='../custom/cart.html')
+                  | View Cart
+              .header-cart-wrapbtn
+                // Button
+                a.flex-c-m.size1.bg1.bo-rad-20.hov1.s-text1.trans-0-4(href='../custom/#')
+                  | Check Out
+      .btn-show-menu-mobile.hamburger.hamburger--squeeze
+        span.hamburger-box
+          span.hamburger-inner
+  // Menu Mobile
+  .wrap-side-menu
+    nav.side-menu
+      ul.main-menu
+        li.item-topbar-mobile.p-l-20.p-t-8.p-b-8
+          span.topbar-child1
+            | Free shipping for standard order over $100
+        li.item-topbar-mobile.p-l-20.p-t-8.p-b-8
+          .topbar-child2-mobile
+            span.topbar-email
+              | fashe@example.com
+            .topbar-language.rs1-select2
+              select.selection-1(name='time')
+                option USD
+                option EUR
+        li.item-topbar-mobile.p-l-10
+          .topbar-social-mobile
+            a.topbar-social-item.fa.fa-facebook(href='../custom/#')
+            a.topbar-social-item.fa.fa-instagram(href='../custom/#')
+            a.topbar-social-item.fa.fa-pinterest-p(href='../custom/#')
+            a.topbar-social-item.fa.fa-snapchat-ghost(href='../custom/#')
+            a.topbar-social-item.fa.fa-youtube-play(href='../custom/#')
+        li.item-menu-mobile
+          a(href='../custom/index.html') Home
+          ul.sub-menu
+            li
+              a(href='../custom/index.html') Homepage V1
+            li
+              a(href='../custom/home-02.html') Homepage V2
+            li
+              a(href='../custom/home-03.html') Homepage V3
+          i.arrow-main-menu.fa.fa-angle-right(aria-hidden='true')
+        li.item-menu-mobile
+          a(href='../custom/product.html') Shop
+        li.item-menu-mobile
+          a(href='../custom/product.html') Sale
+        li.item-menu-mobile
+          a(href='../custom/cart.html') Features
+        li.item-menu-mobile
+          a(href='../custom/blog.html') Blog
+        li.item-menu-mobile
+          a(href='../custom/about.html') About
+        li.item-menu-mobile
+          a(href='../custom/contact.html') Contact
+block content
+footer.bg6.p-t-45.p-b-43.p-l-45.p-r-45
+  .flex-w.p-b-90
+    .w-size6.p-t-30.p-l-15.p-r-15.respon3
+      h4.s-text12.p-b-30
+        | GET IN TOUCH
+      div
+        p.s-text7.w-size27
+          | Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+        .flex-m.p-t-30
+          a.fs-18.color1.p-r-20.fa.fa-facebook(href='../custom/#')
+          a.fs-18.color1.p-r-20.fa.fa-instagram(href='../custom/#')
+          a.fs-18.color1.p-r-20.fa.fa-pinterest-p(href='../custom/#')
+          a.fs-18.color1.p-r-20.fa.fa-snapchat-ghost(href='../custom/#')
+          a.fs-18.color1.p-r-20.fa.fa-youtube-play(href='../custom/#')
+    .w-size7.p-t-30.p-l-15.p-r-15.respon4
+      h4.s-text12.p-b-30
+        | Categories
+      ul
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Men
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Women
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Dresses
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Sunglasses
+    .w-size7.p-t-30.p-l-15.p-r-15.respon4
+      h4.s-text12.p-b-30
+        | Links
+      ul
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Search
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | About Us
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Contact Us
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Returns
+    .w-size7.p-t-30.p-l-15.p-r-15.respon4
+      h4.s-text12.p-b-30
+        | Help
+      ul
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Track Order
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Returns
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | Shipping
+        li.p-b-9
+          a.s-text7(href='../custom/#')
+            | FAQs
+    .w-size8.p-t-30.p-l-15.p-r-15.respon3
+      h4.s-text12.p-b-30
+        | Newsletter
+      form
+        .effect1.w-size9
+          input.s-text7.bg6.w-full.p-b-5(type='text' name='email' placeholder='email@example.com')
+          span.effect1-line
+        .w-size2.p-t-20
+          // Button
+          button.flex-c-m.size2.bg4.bo-rad-23.hov1.m-text3.trans-0-4
+            | Subscribe
+  .t-center.p-l-15.p-r-15
+    a(href='../custom/#')
+      img.h-size2(src='../custom/images/icons/paypal.png' alt='IMG-PAYPAL')
+    a(href='../custom/#')
+      img.h-size2(src='../custom/images/icons/visa.png' alt='IMG-VISA')
+    a(href='../custom/#')
+      img.h-size2(src='../custom/images/icons/mastercard.png' alt='IMG-MASTERCARD')
+    a(href='../custom/#')
+      img.h-size2(src='../custom/images/icons/express.png' alt='IMG-EXPRESS')
+    a(href='../custom/#')
+      img.h-size2(src='../custom/images/icons/discover.png' alt='IMG-DISCOVER')
+    .t-center.s-text8.p-t-20
+      | Copyright &copy; 2018 All rights reserved. | This template is made with 
+      i.fa.fa-heart-o(aria-hidden='true')
+      |  by 
+      a(href='../custom/https://colorlib.com' target='_blank') Colorlib
+// Back to top
+#myBtn.btn-back-to-top.bg0-hov
+  span.symbol-btn-back-to-top
+    i.fa.fa-angle-double-up(aria-hidden='true')
+// Container Selection1
+#dropDownSelect1
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/jquery/jquery-3.2.1.min.js')
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/animsition/js/animsition.min.js')
+// ===============================================================================================
+//- script(type='text/javascript' src='../custom/vendor/bootstrap/js/popper.js')
+script(type='text/javascript' src='../custom/vendor/bootstrap/js/bootstrap.min.js')
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/select2/select2.min.js')
+script(type='text/javascript').
+  $(".selection-1").select2({
+  minimumResultsForSearch: 20,
+  dropdownParent: $('#dropDownSelect1')
+  });
+  $(".selection-2").select2({
+  minimumResultsForSearch: 20,
+  dropdownParent: $('#dropDownSelect2')
+  });
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/daterangepicker/moment.min.js')
+script(type='text/javascript' src='../custom/vendor/daterangepicker/daterangepicker.js')
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/slick/slick.min.js')
+script(type='text/javascript' src='../custom/js/slick-custom.js')
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/countdowntime/countdowntime.js')
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/lightbox2/js/lightbox.min.js')
+// ===============================================================================================
+script(type='text/javascript' src='../custom/vendor/sweetalert/sweetalert.min.js')
+script(type='text/javascript').
+  $('.block2-btn-addcart').each(function(){
+  var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+  $(this).on('click', function(){
+  swal(nameProduct, "is added to cart !", "success");
+  });
+  });
+  $('.block2-btn-addwishlist').each(function(){
+  var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+  $(this).on('click', function(){
+  swal(nameProduct, "is added to wishlist !", "success");
+  });
+  });
+// ===============================================================================================
+script(src='../custom/js/main.js')

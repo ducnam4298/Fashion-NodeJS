@@ -1,0 +1,53 @@
+extends ../layout/auth-layout
+block content
+  #page-wrapper
+    .container-fluid
+      .row.bg-title
+        .col-lg-3.col-md-4.col-sm-4.col-xs-12
+          h4.page-title Categories
+        .row
+          .col-sm-12
+            .white-box
+              p.text-muted
+                #add-popup.popup
+                  // Modal content
+                  .popup-content
+                    span.popupclose(onclick='closePopupAdd();') &times;
+                    h3 Add Category
+                    form(method='post' action='../category/store')
+                      .col-md-12
+                        label
+                          | Name 
+                          span.required *
+                        input(type='text' name='name' required)
+                      .col-md-12
+                        input.btn.btn-success(type='submit' value='Submit')
+                    .clearfix
+                  .clearfix
+                input.btn.btn-danger(type='button' value='Add Category' onclick='openPopupAdd();')
+
+              .table-responsive
+                table.table
+                  thead
+                    tr
+                      th ID
+                      th Category Name
+                      th(width='10px')
+                      th(width='10px')
+                  tbody
+                  each category in categories
+                    tr
+                      td #{category._id}
+                      td #{category.name}
+                      td
+                        a.btn.btn-primary(href=`../category/edit/${category._id}`) Update
+                      td
+                        - var state = category.state
+                          if state === 'active'
+                            form(method='post' action=`../category/hidden/${category._id}`)
+                              .col-md-12
+                                input.btn.btn-danger(type='submit' value='Hidden' onclick='deleteChoice();')
+                          else
+                            form(method='post' action=`../category/active/${category._id}`)
+                              .col-md-12
+                                input.btn.btn-success(type='submit' value='Active' onclick='deleteChoice();')
